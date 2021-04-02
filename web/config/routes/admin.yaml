@@ -1,0 +1,3 @@
+default:
+  resource: 'admin/default-controller.yaml'
+  prefix: /admin/default
