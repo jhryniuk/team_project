@@ -1,3 +1,7 @@
-default:
-  resource: 'admin/default-controller.yaml'
-  prefix: /admin/default
+admin-default-index:
+  path: /admin/
+  controller: App\Controller\Admin\DefaultController::index
+
+users:
+  resource: 'admin/users-controller.yaml'
+  prefix: /admin/users

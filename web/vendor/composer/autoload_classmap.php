@@ -6,7 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\Admin\\DefaultController' => $baseDir . '/src/Controller/Admin/DefaultController.php',
+    'App\\Controller\\DefaultController' => $baseDir . '/src/Controller/DefaultController.php',
+    'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
+    'App\\Controller\\UsersController' => $baseDir . '/src/Controller/UsersController.php',
+    'App\\Entity\\Users' => $baseDir . '/src/Entity/Users.php',
+    'App\\Form\\UsersType' => $baseDir . '/src/Form/UsersType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
+    'App\\Repository\\UsersRepository' => $baseDir . '/src/Repository/UsersRepository.php',
+    'App\\Security\\Authenticator' => $baseDir . '/src/Security/Authenticator.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Collator' => $vendorDir . '/symfony/intl/Resources/stubs/Collator.php',
     'Doctrine\\Bundle\\DoctrineBundle\\CacheWarmer\\DoctrineMetadataCacheWarmer' => $vendorDir . '/doctrine/doctrine-bundle/CacheWarmer/DoctrineMetadataCacheWarmer.php',
