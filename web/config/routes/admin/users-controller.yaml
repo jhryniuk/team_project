@@ -1,0 +1,24 @@
+admin-users-index:
+  path: /
+  controller: App\Controller\Admin\UsersController::index
+  methods: GET
+
+admin-users-new:
+  path: /new
+  controller: App\Controller\Admin\UsersController::new
+  methods: GET|POST
+
+admin-users-show:
+  path: /{id}
+  controller: App\Controller\Admin\UsersController::show
+  methods: GET
+
+admin-users-edit:
+  path: /{id}/edit
+  controller: App\Controller\Admin\UsersController::edit
+  methods: GET|POST
+
+admin-users-delete:
+  path: /{id}
+  controller: App\Controller\Admin\UsersController::delete
+  methods: POST
