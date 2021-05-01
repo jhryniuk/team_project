@@ -5,3 +5,7 @@ admin-default-index:
 users:
   resource: 'admin/users-controller.yaml'
   prefix: /admin/users
+
+articles:
+  resource: 'admin/articles-controller.yaml'
+  prefix: /admin/articles
