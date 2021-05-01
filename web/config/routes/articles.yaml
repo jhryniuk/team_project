@@ -1,0 +1,9 @@
+articles-index:
+  path: /articles/
+  controller: App\Controller\ArticlesController::index
+  methods: GET
+
+articles-show:
+  path: /articles/{id}
+  controller: App\Controller\ArticlesController::show
+  methods: GET

@@ -1,0 +1,24 @@
+admin-articles-index:
+  path: /
+  controller: App\Controller\Admin\ArticlesController::index
+  methods: GET
+
+admin-articles-new:
+  path: /new
+  controller: App\Controller\Admin\ArticlesController::new
+  methods: GET|POST
+
+admin-articles-show:
+  path: /{id}
+  controller: App\Controller\Admin\ArticlesController::show
+  methods: GET
+
+admin-articles-edit:
+  path: /{id}/edit
+  controller: App\Controller\Admin\ArticlesController::edit
+  methods: GET|POST
+
+admin-articles-delete:
+  path: /{id}
+  controller: App\Controller\Admin\ArticlesController::delete
+  methods: POST
