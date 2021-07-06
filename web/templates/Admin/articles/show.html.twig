@@ -5,30 +5,30 @@
 {% block body %}
     <h1>Articles</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th scope="row">Id</th>
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th scope="row">Title</th>
                 <td>{{ article.title }}</td>
             </tr>
             <tr>
-                <th>Content</th>
+                <th scope="row">Content</th>
                 <td>{{ article.content }}</td>
             </tr>
             <tr>
-                <th>Image</th>
+                <th scope="row">Image</th>
                 <td>{{ article.image }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('admin-articles-index') }}">back to list</a>
+    <a href="{{ path('admin-articles-index') }}" class="btn btn-primary">back to list</a>
 
-    <a href="{{ path('admin-articles-edit', {'id': article.id}) }}">edit</a>
+    <a href="{{ path('admin-articles-edit', {'id': article.id}) }}" class="btn btn-primary">edit</a>
 
     {{ include('Admin/articles/_delete_form.html.twig') }}
 {% endblock %}

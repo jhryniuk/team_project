@@ -5,26 +5,26 @@
 {% block body %}
     <h1>Users</h1>
 
-    <table class="table">
+    <table class="table table-striped">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th scope="row">Id</th>
                 <td>{{ user.id }}</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th scope="row">Email</th>
                 <td>{{ user.email }}</td>
             </tr>
             <tr>
-                <th>Roles</th>
+                <th scope="row">Roles</th>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('admin-users-index') }}">back to list</a>
+    <a href="{{ path('admin-users-index') }}" class="btn btn-primary">back to list</a>
 
-    <a href="{{ path('admin-users-edit', {'id': user.id}) }}">edit</a>
+    <a href="{{ path('admin-users-edit', {'id': user.id}) }}" class="btn btn-primary">edit</a>
 
     {{ include('Admin/users/_delete_form.html.twig') }}
 {% endblock %}
