@@ -1,0 +1,59 @@
+version: '3.5'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: docker/php/Dockerfile
+    volumes:
+      - web:/var/www/html
+    networks:
+      - default
+
+  nginx:
+    image: nginx:1.17.5
+    ports:
+      - 8080:80
+    volumes:
+      - web:/var/www/html
+      - ./docker/nginx/web.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - default
+    expose:
+      - 80
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - 3306:3306
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: toor
+      MYSQL_USER: teamproject
+      MYSQL_PASSWORD: teamproject
+      MYSQL_DATABASE: teamproject
+    networks:
+      - default
+    expose:
+      - 3306
+
+networks:
+  default:
+    driver: bridge
+
+
+volumes:
+  web:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/web
+      o: bind
+
+  db:
+    driver: local
+    driver_opts:
+      type: none
+      device: $PWD/docker/data/mysql
+      o: bind

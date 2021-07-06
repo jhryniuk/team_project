@@ -1,2 +1,1 @@
-html
-vagrant/.vagrant
+docker/data/mysql/
