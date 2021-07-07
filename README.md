@@ -11,7 +11,17 @@ This project is working CMS that can be adapted to manage your own website.
 In order to run this project you have to follow the steps:
 * download from github `git clone git@github.com:jhryniuk/team_project.git`
 * go to `team_project`
-* run command `docker-compose build && docker-compose up`
+
+At first run:  
+
+* run command `docker-compose build`
+* run command `docker-compose up mysql -d`
+* run command `docker-compose up -d`
+  
+At second run:
+
+* run command `docker-compose up -d`
+
 * add `127.0.0.1 team-project.dev www.team-project.dev` to your `/etc/hosts` file
 
 You should see running project in the browser by using url `team-project.dev`
