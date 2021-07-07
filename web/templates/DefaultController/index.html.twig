@@ -1,5 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h5>{{ test }}</h5>
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <th scope="row">Total Articles</th>
+            <td>{{ articles_total }}</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}

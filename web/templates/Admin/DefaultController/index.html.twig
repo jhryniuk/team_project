@@ -1,4 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'base-admin.html.twig' %}
 
 {% block body %}
+    <table class="table table-striped">
+        <tbody>
+        <tr>
+            <th scope="row">Total Articles</th>
+            <td>{{ articles_total }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Total Users</th>
+            <td>{{ users_total }}</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
